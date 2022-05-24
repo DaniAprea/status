@@ -1,0 +1,235 @@
+/*Me falta imagen de fondo y box modelling*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: #d1ced4;
+    background-color: black;
+}
+/* header del sitio */
+
+header {
+    display: grid;
+    grid-template: 100% / 20% 20% 1fr;
+    gap: 10px;
+    padding: 10px;
+    grid-auto-flow: dense;
+    grid-template-areas: "eslogan logo nav__horizontal";
+}
+
+.eslogan{
+    margin-left: 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.eslogan img {
+    width: 150px;
+    height: 50px;
+}
+.logo{
+    padding-right: 10px;
+
+}
+.nav__horizontal a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+}
+nav{
+    width: 100%;
+    height: 100%;
+}
+/* enlaces en horizontal */
+    
+.enlaces__horizontal {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+/* enlaces en vertical */
+.enlaces__vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100px;
+    background-color: black;
+    margin: 10px;
+    /*
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c53b1f' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    */
+}
+.nav__lateral{
+    height: 528px;
+    width: 100px;
+
+}
+ul {
+    list-style: none;
+}
+
+a img:hover{
+    transform: scale(1.2);
+}
+/* main del sitio */
+.principal{
+    display: flex;
+    flex-direction: row;
+    
+}
+.card__info {
+    display: flex;
+    flex-direction: row;
+}
+.card{
+    text-align: justify;
+    font-family:monospace;
+    padding: 8px;
+    margin: 0px;
+    border: solid #d1ced4 5px;
+    border-style: outset;
+    
+}
+
+h1,h2{
+    text-align: center;
+    text-decoration: underline;
+    margin: 10px;
+}
+/*galería de diseños*/
+.gallery__firstrow {
+display: grid;
+grid-template: 50% 50% / 1fr 1fr 1fr 1fr;
+grid-template-areas: 
+"remera__uno remera__dos remera__seis gorra__uno"
+"remera__tres remera__cuatro remera__cinco remera__dos"
+;
+gap: 10px;
+padding: 10px;
+}
+.gallery__secondrow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+
+/* footer del sitio */
+footer{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    /*
+    background-color: #5c5853;
+    background-color: #796e08;
+    background-color: #000000;
+    */
+    background-color: #000000;
+    /*
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c53b1f' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    */
+    height: 120px;
+}
+.trademark__logo {
+    margin-top: 25px;
+    height: 100px;
+}
+    /*efecto de rotación*/
+.rotate {
+        animation: rotation 8s infinite linear;
+      }
+@keyframes rotation {
+from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(359deg);
+}
+}
+
+.medios__contacto {
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    border: solid red 2px;
+}
+.entrada__datosForm {
+    display: flex;
+    flex-direction: column;
+}
+.entrada__datosForm span {
+    display: flex;
+    flex-direction: row;
+}
+.tablero {
+    display: flex;
+    flex-direction: column;
+}
+.tablero__opiniones {
+    display: flex;
+    flex-direction: row;
+}
+.tablero__opiniones article {
+    border: solid 2px red;
+}
+
+@media only screen and (min-width:652px) and (max-width:768px) {
+    .enlaces__horizontal {
+        flex-wrap: wrap;
+    }
+
+    .enlaces__horizontal a {
+        margin: 15px;
+    }
+
+    .card__info {
+        flex-wrap: wrap;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        height: 240px;
+    }
+/* contenedor de items contacto*/
+    .medios__contacto {
+        flex-wrap: wrap;
+    }
+
+}
+iframe {
+    min-width: 670px;
+}
+
+@media only screen and (max-width:651px) {
+    .enlaces__horizontal {
+        display: none;
+    }
+
+    .nav__lateral {
+        height: 100%;
+    }
+
+    .nav__lateral nav {
+        height: 100%;
+    }
+/* contenedor de items contacto*/
+    .medios__contacto {
+        flex-wrap: wrap;
+    }
+    
+
+}
+
