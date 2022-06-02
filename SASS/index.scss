@@ -1,0 +1,13 @@
+header {
+    img {
+        width: auto;
+    }
+}
+
+p {
+    text-align: center;
+    
+    &__info{
+        color: red;
+    }
+}
