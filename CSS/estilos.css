@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*Me falta imagen de fondo y box modelling*/
 
 *{
@@ -145,16 +146,22 @@ footer{
     height: 100px;
 }
     /*efecto de rotación enlace a redes*/
+=======
+.nav-pills li a img:hover{
+    transform: scale(1.2);
+}
+>>>>>>> segunda__entrega
 .rotate {
-        animation: rotation 8s infinite linear;
-      }
+    animation: rotation 8s infinite linear;
+  }
 @keyframes rotation {
 from {
-    transform: rotate(0deg);
+transform: rotate(0deg);
 }
 to {
-    transform: rotate(359deg);
+transform: rotate(359deg);
 }
+<<<<<<< HEAD
 }
 /* animación de header */
 .deslizar {
@@ -259,3 +266,6 @@ iframe {
 
 }
 
+=======
+}
+>>>>>>> segunda__entrega
