@@ -1,13 +1,15 @@
-header {
-    img {
-        width: auto;
+.nav-pills li a img:hover {
+    transform: scale(1.2);
+}  
+.rotate {
+    animation: rotation 8s infinite linear;
+} 
+@keyframes rotation {
+    from {
+    transform: rotate(0deg);
+    } 
+    to {
+    transform: rotate(359deg);
     }
-}
 
-p {
-    text-align: center;
-    
-    &__info{
-        color: red;
-    }
 }

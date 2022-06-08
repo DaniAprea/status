@@ -1,7 +1,11 @@
-header img {
-  width: auto; }
+.nav-pills li a img:hover {
+  transform: scale(1.2); }
 
-p {
-  text-align: center; }
-  p__info {
-    color: red; }
+.rotate {
+  animation: rotation 8s infinite linear; }
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
