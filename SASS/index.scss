@@ -1,6 +1,12 @@
+// importo variables scss
+@import 'Variables';
+
+
 .nav-pills li a img:hover {
     transform: scale(1.2);
 }  
+
+// rotación de íconos redes en footer
 .rotate {
     animation: rotation 8s infinite linear;
 } 
