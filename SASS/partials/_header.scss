@@ -1,0 +1,78 @@
+/* HEADER DEL SITIO */
+
+header {
+  grid-area: "encabezado";
+  width: 100vw;
+}
+
+/* ENLACES A REDES SOCIALES */
+
+.redes {
+  grid-area: "redes";
+  padding: 10px;
+  display: flex;
+
+  a {
+    text-decoration: none;
+    color: #000000;
+    font-family: $link__font;
+  }
+
+  .bar {
+    color: orange;
+    font-family: $link__font;
+  }
+}
+
+/* LOGOTIPO */
+
+.logo {
+  grid-area: "logo";
+
+  img {
+    width: 150px;
+    padding: 10px;
+  }
+}
+
+/* GRILLA DE HEADER */
+
+.head__site {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "redes logo";
+}
+
+/* ENLACES  */
+
+.nav__top {
+  width: 70vw;
+  display: flex;
+  justify-content: space-around;
+  border-top: solid gray 2px;
+  margin: 0 auto;
+  padding: 20px;
+
+  a {
+    text-decoration: none;
+    color: #000000;
+    font-family: $link__font;
+    width: 150px;
+    text-align: center;
+    transition: width 2s;
+
+    &:hover {
+      color: orange;
+      text-shadow: 2px gray;
+      width: 200px;
+    }
+  }
+
+/* border inferior de enlace de página activa */
+  .active__page {
+    border-bottom: #ffc477 solid 2px;
+  }
+}
+

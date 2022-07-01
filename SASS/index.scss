@@ -1,21 +1,19 @@
-// importo variables scss
-@import 'Variables';
 
-
-.nav-pills li a img:hover {
-    transform: scale(1.2);
-}  
-
-// rotación de íconos redes en footer
-.rotate {
-    animation: rotation 8s infinite linear;
-} 
-@keyframes rotation {
-    from {
-    transform: rotate(0deg);
-    } 
-    to {
-    transform: rotate(359deg);
-    }
-
+/*  RESET DE ESTILOS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
 }
+
+@import "./partials/variables";
+@import "./partials/mixin";
+@import "./partials/menucollapse";
+@import "./partials/header";
+@import "./partials/footer";
+@import "./partials/mainIndex";
+@import "./partials/mainContacto.scss";
+@import "./partials/mainServicios";
+@import "./partials/mainNosotros";
+@import "./partials/mainOpiniones";
+@import "./partials/breakpoints";

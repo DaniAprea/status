@@ -1,0 +1,78 @@
+/* CONTENIDO PRINCIPAL - MAIN */
+
+.principal__site--text {
+  height: 600px;
+  width: 100%;
+  background: url(../imgFlor/fotoMain.jpeg) no-repeat center center fixed;
+  background-size: 100%;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 2fr 1fr 1fr 1fr 2fr;
+  gap: 0px 0px;
+  grid-template-areas: ". . ." ". bienvenida ." ". nombre ." ". invitacion ." ". boton .";
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+
+  article {
+    background-color: black;
+    opacity: 0.5;
+  }
+}
+
+/* opacidad de fondo de contenedor del texto*/
+/* se usan mismos atributos en título de nosotros */
+/* texto principal dividido en 3 partes */
+
+.welcome {
+  font-family: $link__font;
+  font-size: 40px;
+  color: white;
+  grid-area: bienvenida;
+}
+
+.company__name {
+  grid-area: nombre;
+  width: auto;
+  height: auto;
+}
+
+/* tiene casi los mismos atributos que .welcome */
+
+.invitation {
+  font-family: $link__font;
+  font-size: 40px;
+  color: #ffffff;
+  grid-area: invitacion;
+  width: auto;
+  height: auto;
+}
+
+/* Botón de contacto en principal */
+
+.principal__site--button {
+  grid-area: boton;
+  width: 150px;
+  height: 40px;
+  box-shadow: inset 0px 1px 0px 0px #fce2c1;
+  background: linear-gradient(to bottom, #ffc477 5%, #d6831e 100%);
+  background-color: #ffc477;
+  border-radius: 6px;
+  border: 1px solid #eeb44f;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: $link__font;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 6px 0 6px 0;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #cc9f52;
+  text-align: center;
+
+  &:hover {
+    background: linear-gradient(to bottom, #d6831e 5%, #ffc477 100%);
+    background-color: #d6831e;
+  }
+}

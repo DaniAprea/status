@@ -1,0 +1,24 @@
+@media only screen and (max-width: 768px){
+    .menu__standard {
+        display: none;
+    }
+
+    .menu__responsive {
+        display: block;
+    }
+
+    .principal__aboutus {
+        flex-wrap: wrap;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas: "foto1" "foto2" "foto3" "foto4" "foto5" "foto6";
+    }
+
+    .review {
+        flex-wrap: wrap;
+    }
+}

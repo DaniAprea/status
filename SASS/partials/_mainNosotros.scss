@@ -1,0 +1,47 @@
+/* main de sobre nosotros */
+
+.principal__aboutus {
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.principal__aboutus--imgtext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+    padding-left: 50px;
+  }
+}
+
+.principal__aboutus picture {
+  padding-left: 50px;
+}
+
+/* mismos atributos que Galeria en servicios */
+
+.principal__aboutus--text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    width: 50%;
+    font-family: $principal__font;
+    text-align: center;
+  }
+
+  h1 {
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+  }
+}

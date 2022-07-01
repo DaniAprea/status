@@ -1,14 +1,324 @@
-.nav-pills li a img:hover{
-    transform: scale(1.2);
+/*  RESET DE ESTILOS */
+*{
+  margin: 0;
+  padding: 0;
 }
-.rotate {
-    animation: rotation 8s infinite linear;
-  }
-@keyframes rotation {
-from {
-transform: rotate(0deg);
+
+/* HEADER DEL SITIO */
+header {
+  grid-area: "encabezado";
+  width: 100vw;
 }
-to {
-transform: rotate(359deg);
+
+/* ENLACES A REDES SOCIALES */
+.redes {
+  grid-area: "redes";
+  padding: 10px;
+  display: flex;
 }
+.redes a {
+  text-decoration: none;
+  color: black;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.redes .bar {
+  color: orange;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* LOGOTIPO */
+.logo {
+  grid-area: "logo";
+}
+.logo img {
+  width: 150px;
+  padding: 10px;
+}
+
+
+/* GRILLA DE HEADER */
+.head__site {
+  display: grid; 
+  grid-template-columns: 2fr 1fr 2fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+  "redes logo"; 
+}
+
+/* ENLACES DESPLEGADOS */
+.nav__top {
+  width: 70vw;
+  display: flex;
+  justify-content:space-around;
+  border-top: solid gray 2px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.nav__top a {
+  text-decoration: none;
+  color: black;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  width: 150px;
+  text-align: center;
+
+}
+.nav__top a:hover {
+  color: orange;
+  text-shadow: 2px gray;
+}
+
+/* border inferior de enlace de página activa */
+.nav__top .active__page{
+  border-bottom: #ffc477 solid 2px;
+}
+
+
+
+/* CONTENIDO PRINCIPAL - MAIN */
+
+.principal__site--text {
+  height: 600px;
+  width: 100vw;
+  background: url(../imgFlor/fotoMain.jpeg) no-repeat center center fixed;
+  background-size: 100%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  position: relative;
+}
+
+/* opacidad de fondo de contenedor del texto*/
+/* se usan mismos atributos en título de nosotros */
+.principal__site--text article {
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+}
+
+/* texto principal dividido en 3 partes */
+.welcome {
+  position: absolute;
+  top: 40%;
+  left: 37%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+
+.company__name {
+  position: absolute;
+  top: 50%;
+  left: 33%;
+}
+/* tiene casi los mismos atributos que .welcome */
+.invitation {
+  position: absolute;
+  top: 60%;
+  left: 34%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: #ffffff;
+}
+/* Botón de contacto en principal */
+.principal__site--button {
+  position: absolute;
+  top: 70%;
+  left: 38%;
+  width: 150px;
+  height: 30px;
+box-shadow:inset 0px 1px 0px 0px #fce2c1;
+background:linear-gradient(to bottom, #ffc477 5%, #d6831e 100%);
+background-color:#ffc477;
+border-radius:6px;
+border:1px solid #eeb44f;
+display:inline-block;
+cursor:pointer;
+color:#000000;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size:20px;
+font-weight:bold;
+padding: 12px 24px 6px;
+text-decoration:none;
+text-shadow:0px 1px 0px #cc9f52;
+}
+.principal__site--button:hover {
+background:linear-gradient(to bottom, #d6831e 5%, #ffc477 100%);
+background-color:#d6831e;
+}
+.principal__site--button:active {
+position: absolute;
+  top: 70%;
+  left: 38%;
+}
+
+/* pie del sitio */
+.feet__site {
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+/* mismos atributos que card en opiniones */
+.feet__site--card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+.feet__site--card a{
+  text-decoration: none;
+  color: #F46B3A;
+  font-family: 'Courier New', Courier, monospace;
+  width: 150px;
+  text-align: center;
+}
+
+.feet__site img{
+  width: 70px;
+  height: 70px;
+}
+
+.title__footer {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  padding: 10px 0px;
+}
+
+footer {
+  padding-bottom: 20px;
+}
+
+.footer__site--button {
+  width: 96%;
+  height: 50px;
+box-shadow:inset 0px 1px 0px 0px #fce2c1;
+background:linear-gradient(to bottom, #ffc477 5%, #d6831e 100%);
+background-color:#ffc477;
+border-radius:6px;
+border:1px solid #eeb44f;
+display:inline-block;
+cursor:pointer;
+color:#000000;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size:20px;
+font-weight:bold;
+padding: 12px 24px 6px;
+text-decoration:none;
+text-shadow:0px 1px 0px #cc9f52;
+  text-align: center;
+}
+
+/* formulario en contacto hecho con Bootstrap */
+.form-label {
+  font-family: 'Courier New', Courier, monospace;
+}
+.exampleFormControlTextarea1 {
+  font-family: 'Courier New', Courier, monospace;
+}
+.btn {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Galeria en servicios */
+.gallery {
+  border-bottom: solid 2px #F46B3A;
+}
+.servicios__principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.servicios__principal h1 {
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+  color: white;
+}
+.servicios__principal p{
+  width: 50%;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+
+
+
+/* main de sobre nosotros */
+.principal__aboutus {
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.principal__aboutus--imgtext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.principal__aboutus--imgtext h3 {
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+  color: white;
+  padding-left: 50px;
+}
+.principal__aboutus picture {
+  padding-left: 50px;
+}
+/* mismos atributos que Galeria en servicios */
+.principal__aboutus--text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.principal__aboutus--text p{
+  width: 50%;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+.principal__aboutus--text h1 {
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+  color: white;
+}
+
+/* principal de opiniones */
+/* mismos atributos que feet y feet card */
+.principal__reviews h3 {
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+  color: white;
+}
+/* .principal__reviews {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+} */
+.review {
+  display: flex;
+  justify-content: space-around;
+}
+.review__detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  border: solid 2px #F46B3A;
+}
+.review__detail a {
+  text-decoration: none;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+  color: white;
+}
+.review__detail--title {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  padding: 10px 0px;
 }

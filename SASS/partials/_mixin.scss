@@ -1,0 +1,12 @@
+@mixin card__generalities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $principal__font;
+}
+
+@mixin link__generalities {
+    text-decoration: none;
+    color: $link__color;
+    font-family: $link__font;
+}

@@ -1,17 +1,358 @@
-.colour__primary {
-  background-color: #000000; }
+@charset "UTF-8";
+/*  RESET DE ESTILOS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0; }
 
-.colour__secondary {
-  background-color: #9e9a9a; }
+.menu__responsive {
+  display: none; }
 
-.nav-pills li a img:hover {
-  transform: scale(1.2); }
+.collapsemenu {
+  color: white;
+  position: relative;
+  background: #F46B3A;
+  min-height: 48px; }
+  .collapsemenu a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 2px solid #b34e2a;
+    max-width: 200px;
+    background: #F46B3A;
+    font-variant: small-caps;
+    text-shadow: 1px 1px black;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif; }
+    .collapsemenu a:hover {
+      color: black; }
+  .collapsemenu input[type="checkbox"], .collapsemenu .fa-bars, .collapsemenu .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 48px; }
+  .collapsemenu .fa-bars, .collapsemenu .fa-times {
+    font-size: 48px;
+    pointer-events: none; }
+  .collapsemenu input[type="checkbox"] {
+    opacity: 0; }
+  .collapsemenu nav {
+    display: none; }
+  .collapsemenu input:checked ~ nav {
+    display: block; }
+  .collapsemenu input:checked ~ .fa-bars {
+    display: none; }
+  .collapsemenu input:not(:checked) ~ .fa-times {
+    display: none; }
+  .collapsemenu li {
+    list-style: none; }
 
-.rotate {
-  animation: rotation 8s infinite linear; }
+/* HEADER DEL SITIO */
+header {
+  grid-area: "encabezado";
+  width: 100vw; }
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(359deg); } }
+/* ENLACES A REDES SOCIALES */
+.redes {
+  grid-area: "redes";
+  padding: 10px;
+  display: flex; }
+  .redes a {
+    text-decoration: none;
+    color: #000000;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; }
+  .redes .bar {
+    color: orange;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; }
+
+/* LOGOTIPO */
+.logo {
+  grid-area: "logo"; }
+  .logo img {
+    width: 150px;
+    padding: 10px; }
+
+/* GRILLA DE HEADER */
+.head__site {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "redes logo"; }
+
+/* ENLACES  */
+.nav__top {
+  width: 70vw;
+  display: flex;
+  justify-content: space-around;
+  border-top: solid gray 2px;
+  margin: 0 auto;
+  padding: 20px;
+  /* border inferior de enlace de página activa */ }
+  .nav__top a {
+    text-decoration: none;
+    color: #000000;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    width: 150px;
+    text-align: center;
+    transition: width 2s; }
+    .nav__top a:hover {
+      color: orange;
+      text-shadow: 2px gray;
+      width: 200px; }
+  .nav__top .active__page {
+    border-bottom: #ffc477 solid 2px; }
+
+/* pie del sitio */
+.feet__site {
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around; }
+
+/* mismos atributos que card en opiniones */
+.feet__site--card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Courier New", Courier, monospace; }
+  .feet__site--card a {
+    text-decoration: none;
+    color: #F46B3A;
+    font-family: "Courier New", Courier, monospace;
+    width: 150px;
+    text-align: center; }
+
+.feet__site img {
+  width: 70px;
+  height: 70px; }
+
+.title__footer {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 20px;
+  padding: 10px 0px; }
+
+footer {
+  padding-bottom: 20px; }
+
+.footer__site--button {
+  width: 100%;
+  height: 50px;
+  box-shadow: inset 0px 1px 0px 0px #fce2c1;
+  background: linear-gradient(to bottom, #ffc477 5%, #d6831e 100%);
+  background-color: #ffc477;
+  border-radius: 6px;
+  border: 1px solid #eeb44f;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 6px 12px 6px 12px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #cc9f52;
+  text-align: center; }
+
+/* CONTENIDO PRINCIPAL - MAIN */
+.principal__site--text {
+  height: 600px;
+  width: 100%;
+  background: url(../imgFlor/fotoMain.jpeg) no-repeat center center fixed;
+  background-size: 100%;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 2fr 1fr 1fr 1fr 2fr;
+  gap: 0px 0px;
+  grid-template-areas: ". . ." ". bienvenida ." ". nombre ." ". invitacion ." ". boton .";
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center; }
+  .principal__site--text article {
+    background-color: black;
+    opacity: 0.5; }
+
+/* opacidad de fondo de contenedor del texto*/
+/* se usan mismos atributos en título de nosotros */
+/* texto principal dividido en 3 partes */
+.welcome {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 40px;
+  color: white;
+  grid-area: bienvenida; }
+
+.company__name {
+  grid-area: nombre;
+  width: auto;
+  height: auto; }
+
+/* tiene casi los mismos atributos que .welcome */
+.invitation {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 40px;
+  color: #ffffff;
+  grid-area: invitacion;
+  width: auto;
+  height: auto; }
+
+/* Botón de contacto en principal */
+.principal__site--button {
+  grid-area: boton;
+  width: 150px;
+  height: 40px;
+  box-shadow: inset 0px 1px 0px 0px #fce2c1;
+  background: linear-gradient(to bottom, #ffc477 5%, #d6831e 100%);
+  background-color: #ffc477;
+  border-radius: 6px;
+  border: 1px solid #eeb44f;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 6px 0 6px 0;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #cc9f52;
+  text-align: center; }
+  .principal__site--button:hover {
+    background: linear-gradient(to bottom, #d6831e 5%, #ffc477 100%);
+    background-color: #d6831e; }
+
+/* formulario en contacto hecho con Bootstrap */
+.form-label, .exampleFormControlTextarea1 {
+  font-family: "Courier New", Courier, monospace; }
+
+.btn {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; }
+
+/* Galeria en servicios */
+.foto1 {
+  grid-area: "foto1"; }
+
+.foto2 {
+  grid-area: "foto2"; }
+
+.foto3 {
+  grid-area: "foto3"; }
+
+.foto4 {
+  grid-area: "foto4"; }
+
+.foto5 {
+  grid-area: "foto5"; }
+
+.foto6 {
+  grid-area: "foto6"; }
+
+.gallery {
+  border-bottom: solid 2px #F46B3A;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "foto1 foto2 foto3" "foto4 foto5 foto6";
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center; }
+
+.servicios__principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .servicios__principal h1 {
+    background-color: black;
+    opacity: 0.5;
+    color: white; }
+  .servicios__principal p {
+    width: 50%;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center; }
+
+/* main de sobre nosotros */
+.principal__aboutus {
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+
+.principal__aboutus--imgtext {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .principal__aboutus--imgtext h3 {
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+    padding-left: 50px; }
+
+.principal__aboutus picture {
+  padding-left: 50px; }
+
+/* mismos atributos que Galeria en servicios */
+.principal__aboutus--text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .principal__aboutus--text p {
+    width: 50%;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center; }
+  .principal__aboutus--text h1 {
+    background-color: black;
+    opacity: 0.5;
+    color: white; }
+
+/* principal de opiniones */
+/* mismos atributos que feet y feet card */
+.principal__reviews h3 {
+  text-align: center;
+  background-color: black;
+  opacity: 0.5;
+  color: white; }
+
+.review {
+  display: flex;
+  justify-content: space-around; }
+
+.review__detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  border: solid 2px #F46B3A; }
+  .review__detail a {
+    text-decoration: none;
+    text-align: center;
+    background-color: black;
+    opacity: 0.5;
+    color: white; }
+
+.review__detail--title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 20px;
+  padding: 10px 0px; }
+
+@media only screen and (max-width: 768px) {
+  .menu__standard {
+    display: none; }
+  .menu__responsive {
+    display: block; }
+  .principal__aboutus {
+    flex-wrap: wrap; }
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "foto1" "foto2" "foto3" "foto4" "foto5" "foto6"; }
+  .review {
+    flex-wrap: wrap; } }

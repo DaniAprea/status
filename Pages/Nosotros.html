@@ -1,19 +1,14 @@
-<!-- Hice SAAS usando npm run watch-sass con Mixin, variables, SEO -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cucina of Monde ofrece el mejor servicio de catering para eventos.
-    Todo lo que necesitás para tu reunión familiar, cumpleaños, reunión de negocios.
-    Contamos con basta experiencia en servicios de inmejorable calidad, ofreciendo los mejores menús, 
-    de diversos horizontes gastronómicos y con la mayor variedad de sabores.">
-    <title>Cucina of Monde</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="./imgFlor/Favicon/logo__favicon.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta name="description" content="Cucina of Monde está formado por un excelente grupo de profesionales, pero mucho más aún de buenas personas">
+    <title>Sobre Nosotros - Cucina of Monde</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../imgFlor/Favicon/logo__favicon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="./CSS/translated.css">
+    <link rel="stylesheet" href="../CSS/translated.css">
 </head>
 <body>
     <!-- header -->
@@ -24,19 +19,18 @@
             <a href="https://www.instagram.com/dani_aprea/" target="_blank">INSTAGRAM</a>
         </section>
         <!-- logo -->
-        <div class="logo"><a href="/index.html"><img src="./imgFlor/Logo/Logo3.svg"></a></div>
+        <div class="logo"><a href="../index.html"><img src="../imgFlor/Logo/Logo3.svg"></a></div>
     </header>
     <!-- enlaces -->
     <span class="menu__standard">
         <nav class="nav__top"> 
-            <a class= "active__page" href="./index.html">HOME</a>
-            <a href="./Pages/Nosotros.html">SOBRE NOSOTROS</a>
-            <a href="./pages/servicios.html">SERVICIOS</a>
-            <a href="./pages/opiniones.html">OPINIONES</a>
-            <a href="./pages/contacto.html">CONTACTANOS</a>
+            <a href="../index.html">HOME</a>
+            <a class= "active__page" href="./nosotros.html">SOBRE NOSOTROS</a>
+            <a href="./servicios.html">SERVICIOS</a>
+            <a href="./opiniones.html">OPINIONES</a>
+            <a href="./contacto.html">CONTACTANOS</a>
         </nav>
     </span>
-
     <!-- enlaces collapse -->
     <span class="menu__responsive">
         <div class="collapsemenu">
@@ -54,19 +48,28 @@
         </nav>
         </div>
     </span>
-    <!-- contenido principal -->
-    <main class="principal__site">
-        <section class="principal__site--text">
-            <article class="welcome">Bienvenidos a</article>
-            <article class="company__name"><img src="./imgFlor/Logo/textoLogo.svg"></article>
-            <article class="invitation">Viví la experiencia...</article>
-            <a href="./pages/contacto.html" class="principal__site--button">CONTACTANOS</a>
-        </section>
+    <!-- Contenido principal -->
+    <main class="principal__aboutus">
+        <article class="principal__aboutus--imgtext">
+            <picture class="principal__aboutus--img"><img src="../imgFlor/imgHorizontal/Horizontal22.jpeg"></picture>
+            <h3>Pollo mediterráno al Malbec.</h3>
+        </article>
+        <article class="principal__aboutus--text">
+            <h1>Sobre nosotros</h1>
+                <p>
+                    "Nuestra única labor es dar comida"
+                    Parte de nuestras ganancias se destinan a ayudar a los que más necesitan.
+                    Formamos parte de una sociedad de beneficencia, a la cual ayudamos con alimentos
+                    elaborados con la mejor calidad y muchísimo cariño.
+                    Solo somos un granito de arena en un gran mar, dando todo lo que está a
+                    nuestro alcance.
+                </p>
+        </article>
     </main>
     <!-- footer -->
     <footer class="feet__site">
         <div class="feet__site--card">
-            <img src="./imgFlor/Footer/horario.png">
+            <img src="../imgFlor/Footer/horario.png">
             <h3 class="title__footer">HORARIO</h3>
             <p>
                 Lun a Vie 9 a 15hs
@@ -76,7 +79,7 @@
             </p>
         </div>
         <div class="feet__site--card">
-            <img src="./imgFlor/Footer/ubicación.png">
+            <img src="../imgFlor/Footer/ubicación.png">
             <h3 class="title__footer">UBICACIÓN</h3>
             <p>
                 Calle Falsa 123
@@ -86,7 +89,7 @@
             </p>
         </div>
         <div class="feet__site--card">
-            <img src="./imgFlor/Footer/contacto.png">
+            <img src="../imgFlor/Footer/contacto.png">
             <h3 class="title__footer">CONTACTANOS</h3>
             <p>
                 <a href="https://wa.link/n52nmb">Whatsapp</a>
@@ -96,7 +99,6 @@
             </p>
         </div>
     </footer>
-    <a href="./pages/contacto.html" class="footer__site--button">Tenés alguna duda?</a>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <a href="./contacto.html" class="footer__site--button">Tenés alguna duda?</a>
 </body>
 </html>
