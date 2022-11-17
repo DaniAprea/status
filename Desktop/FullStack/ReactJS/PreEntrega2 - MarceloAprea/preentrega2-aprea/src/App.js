@@ -15,7 +15,7 @@ function App() {
 <BrowserRouter>
 
       <NavBar/>
-   
+  
       <Routes>
 
     <Route path='/' element={<ItemsListContainer/>}/>
@@ -29,7 +29,7 @@ function App() {
       </Routes>
 
 </BrowserRouter>
- </div>
+</div>
     
   );
 }
